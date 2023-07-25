@@ -4,16 +4,19 @@
   <listeners>
     <listener class-name="extentlisteners.ExtentListeners"/>
   </listeners>
-  <test thread-count="5" name="Find New Car Test(failed)">
-    <parameter name="browser" value="chrome"/>
+  <test thread-count="5" name="LoginTest(failed)">
+    <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="testcases.CheckoutWithLoginTest">
+      <class name="testcases.ChangePasswordTest">
         <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
           <include name="setUp"/>
+          <include name="testInvalidNewPasswordDisablesSubmitButton"/>
           <include name="tearDown"/>
-          <include name="MyFirstTestCase"/>
+          <include name="testInvalidNewPasswordAndConfirmPasswordDisablesSubmitButton"/>
         </methods>
-      </class> <!-- testcases.CheckoutWithLoginTest -->
+      </class> <!-- testcases.ChangePasswordTest -->
     </classes>
-  </test> <!-- Find New Car Test(failed) -->
+  </test> <!-- LoginTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

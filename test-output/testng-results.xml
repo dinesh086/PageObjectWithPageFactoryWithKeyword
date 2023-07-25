@@ -1,32 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-06T10:06:46Z" name="Suite" finished-at="2022-07-06T10:07:08Z" duration-ms="22329">
+  <suite started-at="2023-07-18T07:52:01Z" name="Suite" finished-at="2023-07-18T07:52:17Z" duration-ms="16682">
     <groups>
     </groups>
-    <test started-at="2022-07-06T10:06:46Z" name="Find New Car Test" finished-at="2022-07-06T10:07:08Z" duration-ms="22329">
-      <class name="testcases.CheckoutWithLoginTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testcases.CheckoutWithLoginTest@29876704]" started-at="2022-07-06T10:06:46Z" name="setUp" finished-at="2022-07-06T10:06:53Z" duration-ms="7195" status="PASS">
+    <test started-at="2023-07-18T07:52:01Z" name="LoginTest" finished-at="2023-07-18T07:52:17Z" duration-ms="16682">
+      <class name="testcases.LoginTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testcases.LoginTest@724bade8]" started-at="2023-07-18T07:52:01Z" name="setUp" finished-at="2023-07-18T07:52:13Z" duration-ms="11804" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="MyFirstTestCase()[pri:1, instance:testcases.CheckoutWithLoginTest@29876704]" started-at="2022-07-06T10:06:53Z" name="MyFirstTestCase" finished-at="2022-07-06T10:07:07Z" duration-ms="14478" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:testcases.LoginTest@724bade8]" started-at="2023-07-18T07:52:13Z" name="beforeClass" finished-at="2023-07-18T07:52:13Z" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- MyFirstTestCase -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.CheckoutWithLoginTest@29876704]" started-at="2022-07-06T10:07:07Z" name="tearDown" finished-at="2022-07-06T10:07:08Z" duration-ms="631" status="PASS">
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testcases.LoginTest@724bade8]" started-at="2023-07-18T07:52:13Z" name="beforeMethod" finished-at="2023-07-18T07:52:13Z" duration-ms="26" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.LoginTest.testBlankEmailPassword() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testBlankEmailPassword()[pri:0, instance:testcases.LoginTest@724bade8]" started-at="2023-07-18T07:52:13Z" name="testBlankEmailPassword" finished-at="2023-07-18T07:52:13Z" duration-ms="351" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBlankEmailPassword -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testcases.LoginTest@724bade8]" started-at="2023-07-18T07:52:13Z" name="beforeMethod" finished-at="2023-07-18T07:52:13Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.LoginTest.testInvalidEmail() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testInvalidEmail()[pri:1, instance:testcases.LoginTest@724bade8]" started-at="2023-07-18T07:52:13Z" name="testInvalidEmail" finished-at="2023-07-18T07:52:14Z" duration-ms="993" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidEmail -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testcases.LoginTest@724bade8]" started-at="2023-07-18T07:52:14Z" name="beforeMethod" finished-at="2023-07-18T07:52:14Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.LoginTest.testInvalidPassword() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testInvalidPassword()[pri:2, instance:testcases.LoginTest@724bade8]" started-at="2023-07-18T07:52:14Z" name="testInvalidPassword" finished-at="2023-07-18T07:52:14Z" duration-ms="419" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidPassword -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testcases.LoginTest@724bade8]" started-at="2023-07-18T07:52:14Z" name="beforeMethod" finished-at="2023-07-18T07:52:14Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.LoginTest.testForgottenPasswordElement()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testForgottenPasswordElement()[pri:3, instance:testcases.LoginTest@724bade8]" started-at="2023-07-18T07:52:14Z" name="testForgottenPasswordElement" finished-at="2023-07-18T07:52:14Z" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testForgottenPasswordElement -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testcases.LoginTest@724bade8]" started-at="2023-07-18T07:52:14Z" name="beforeMethod" finished-at="2023-07-18T07:52:14Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.LoginTest.testForgotPasswordLinkTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testForgotPasswordLinkTest()[pri:4, instance:testcases.LoginTest@724bade8]" started-at="2023-07-18T07:52:14Z" name="testForgotPasswordLinkTest" finished-at="2023-07-18T07:52:15Z" duration-ms="255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testForgotPasswordLinkTest -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testcases.LoginTest@724bade8]" started-at="2023-07-18T07:52:15Z" name="beforeMethod" finished-at="2023-07-18T07:52:15Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.LoginTest.testValidUser() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testValidUser()[pri:5, instance:testcases.LoginTest@724bade8]" started-at="2023-07-18T07:52:15Z" name="testValidUser" finished-at="2023-07-18T07:52:17Z" duration-ms="1974" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidUser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.LoginTest@724bade8]" started-at="2023-07-18T07:52:17Z" name="tearDown" finished-at="2023-07-18T07:52:17Z" duration-ms="808" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testcases.CheckoutWithLoginTest -->
-    </test> <!-- Find New Car Test -->
+      </class> <!-- testcases.LoginTest -->
+    </test> <!-- LoginTest -->
   </suite> <!-- Suite -->
 </testng-results>

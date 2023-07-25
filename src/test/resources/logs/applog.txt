@@ -1,19 +1,5 @@
-INFO    2022-07-06 15:36:46,295 [main] base.BaseTest  - Config properties loaded !!!
-INFO    2022-07-06 15:36:46,296 [main] base.BaseTest  - OR properties loaded !!!
-INFO    2022-07-06 15:36:48,194 [main] base.BaseTest  - Launching Chrome !!!
-INFO    2022-07-06 15:36:49,138 [main] base.BaseTest  - Navigated to : https://askomdch.com/
-INFO    2022-07-06 15:36:53,470 [main] base.BaseTest  - DB Connection established !!!
-INFO    2022-07-06 15:36:54,092 [main] base.BasePage  - Clicked on Shop Now Button
-INFO    2022-07-06 15:36:54,158 [main] base.BasePage  -  Entered value as : blue, in Search box
-INFO    2022-07-06 15:36:54,929 [main] base.BasePage  - Clicked on Search Button
-INFO    2022-07-06 15:36:54,982 [main] base.BasePage  - Clicked on First Item
-INFO    2022-07-06 15:36:56,027 [main] base.BasePage  - Clicked on First Item View Cart
-INFO    2022-07-06 15:36:56,705 [main] base.BasePage  - Clicked on Checkout Button
-INFO    2022-07-06 15:36:56,824 [main] base.BasePage  -  Entered value as : Dinesh, in First name text box
-INFO    2022-07-06 15:36:56,900 [main] base.BasePage  -  Entered value as : Kumar, in Last name text box
-INFO    2022-07-06 15:36:56,999 [main] base.BasePage  -  Entered value as : San Francisco, in Address text box
-INFO    2022-07-06 15:36:57,091 [main] base.BasePage  -  Entered value as : San Francisco, in Town City text box
-INFO    2022-07-06 15:36:57,163 [main] base.BasePage  -  Entered value as : 94188, in Postcode text box
-INFO    2022-07-06 15:36:57,276 [main] base.BasePage  -  Entered value as : dineshkumar@gmail.com, in Email text box
-INFO    2022-07-06 15:36:57,946 [main] base.BasePage  - Placed an order by clicking on Order Button
-INFO    2022-07-06 15:37:08,598 [main] base.BaseTest  - Test Execution completed !!!
+INFO    2023-07-25 16:01:32,202 [main] base.BaseTest  - Config properties loaded !!!
+INFO    2023-07-25 16:01:32,204 [main] base.BaseTest  - OR properties loaded !!!
+INFO    2023-07-25 16:01:44,673 [main] base.BaseTest  - Launching Firefox !!!
+INFO    2023-07-25 16:01:46,527 [main] base.BaseTest  - Navigated to : https://wbtransit.azurewebsites.net/login
+INFO    2023-07-25 16:01:47,454 [main] base.BasePage  - ForgottenPassword button clicked

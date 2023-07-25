@@ -1,0 +1,14 @@
+{
+	"invalidEmail":{
+		"email":"invalidusername@gmail.com",
+		"password":"invalidpassword"
+	},
+	"invalidPassword":{
+		"email":"invalidusername@gmail.com",
+		"password":"invalidpassword"
+	},
+	"validUser":{
+		"email":"admin@wb.com",
+		"password":"Test@123456"
+	}
+}

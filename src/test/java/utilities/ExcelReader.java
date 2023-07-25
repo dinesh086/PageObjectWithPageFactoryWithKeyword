@@ -507,7 +507,7 @@ public class ExcelReader {
 		ExcelReader datatable = null;
 		
 
-			 datatable = new ExcelReader("C:\\CM3.0\\app\\test\\Framework\\AutomationBvt\\src\\config\\xlfiles\\Controller.xlsx");
+			 datatable = new ExcelReader("C:/CM3.0/app/test/Framework/AutomationBvt/src/config/xlfiles/Controller.xlsx");
 				for(int col=0 ;col< datatable.getColumnCount("TC5"); col++){
 					System.out.println(datatable.getCellData("TC5", col, 1));
 				}

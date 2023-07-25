@@ -8,17 +8,19 @@
 		</listeners>
 
 
-  <test name="Find New Car Test">
-  <parameter name="browser" value="chrome"/>
+  <test name="LoginTest">
+  <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="testcases.CheckoutWithLoginTest"/>
-
+      <!--  <class name="testcases.LoginTest"/>-->
+      <!--  <class name="testcases.ChangePasswordTest"/>-->
+  			<class name="testcases.ForgotPasswordTest"/>
     </classes>
   </test> <!-- Test -->
   
   
   
   <!--<test name="Car Name and Price Test">
+  <parameter name="browser" value="firefox"/>
     <classes>
       <class name="testcases.CarNameAndPriceTest"/>
 

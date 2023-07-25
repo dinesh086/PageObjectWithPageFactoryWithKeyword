@@ -36,7 +36,7 @@ public class ExtentManager {
 	        extent = new ExtentReports();
 	        extent.attachReporter(htmlReporter);
 	        extent.setSystemInfo("Automation Tester", "Dinesh Kumar");
-	        extent.setSystemInfo("Organization", "Appventurez");
+	        extent.setSystemInfo("Organization", "Datamatics");
 	        extent.setSystemInfo("Build no", "APP-12345");
 	        
 	        
@@ -49,12 +49,18 @@ public class ExtentManager {
 			Date d = new Date();
 			 fileName = d.toString().replace(":", "_").replace(" ", "_")+".jpg";
 
-			
+			 String Path = System.getProperty("user.dir")+"/reports/"; 
 			
 			File screeshot = ((TakesScreenshot)  BasePage.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(screeshot, new File(".//reports//"+fileName));
-		}
 		
+			try {
+				FileUtils.copyFile(screeshot, new File(Path+fileName));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	
 		
 
 		public static void captureElementScreenshot(WebElement element) throws IOException {
@@ -62,13 +68,38 @@ public class ExtentManager {
 			Date d = new Date();
 			String fileName = d.toString().replace(":", "_").replace(" ", "_")+".jpg";
 
-			
+			 String Path = System.getProperty("user.dir")+"/reports/"; 
 			
 			File screeshot = ((TakesScreenshot) element).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(screeshot, new File(".//screenshot//"+"Element_"+fileName));
+			
+			try {
+				FileUtils.copyFile(screeshot, new File(Path+"Element_"+fileName));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 	 
+		/*  public static String screenshotPath;
+		public static String screenshotName;
+		
+		public static void captureScreenshotNew() {
 
+			File scrFile = ((TakesScreenshot) BasePage.driver).getScreenshotAs(OutputType.FILE);
+
+			Date d = new Date();
+			screenshotName = d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
+
+			try {
+				FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir") + "\\reports\\" + screenshotName));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		
+		}*/
+	
 
 	}

@@ -3,6 +3,7 @@ package base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.SQLException;
 import java.time.Duration;
 import java.util.HashMap;
@@ -17,9 +18,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
+
+import utilities.TestUtils;
 
 //import com.relevantcodes.extentreports.LogStatus;
 
@@ -35,19 +42,34 @@ public class BaseTest {
 	private Properties config = new Properties();
 	private FileInputStream fis;
 	private static Logger log = Logger.getLogger(BaseTest.class);
-	public ExcelReader excel = new ExcelReader(".//src//test//resources//excel//testdata.xlsx");
+	public ExcelReader excel = new ExcelReader("./src/test/resources/excel/testdata.xlsx");
 	public MonitoringMail mail = new MonitoringMail();
 	public WebDriverWait wait;
-	
+	protected static HashMap<String, String> strings = new HashMap<String, String>();
+	TestUtils utils;
+	InputStream stringsis;
 	@Parameters({"browser"})
-	  @BeforeTest
+	 @BeforeClass
+	
 	 	
-	public void setUp(String browser) {
+	public void setUp(String browser) throws Exception {
 		
 		// loading the log file
 		PropertyConfigurator.configure("./src/test/resources/properties/log4j.properties");
-
-		// loading the OR and Config properties
+        String xmlFileName = "strings/strings.xml";
+        try {
+        	 stringsis = getClass().getClassLoader().getResourceAsStream(xmlFileName);
+   		     utils = new TestUtils();
+        	 strings= utils.parseStringXML(stringsis);
+        }catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			if(stringsis!=null) {
+				stringsis.close();
+			}
+		}
+        
 		try {
 			fis = new FileInputStream("./src/test/resources/properties/config.properties");
 		} catch (FileNotFoundException e) {
@@ -103,7 +125,7 @@ public class BaseTest {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(Integer.parseInt(config.getProperty("explicit.wait"))));
 		try {
 			DbManager.setMysqlDbConnection();
-			log.info("DB Connection established !!!");
+			//log.info("DB Connection established !!!");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -114,7 +136,9 @@ public class BaseTest {
 		
 	}
 	
-	@AfterMethod
+//	@AfterMethod
+	@AfterClass
+	
 	public void tearDown() {
 
 		driver.quit();
